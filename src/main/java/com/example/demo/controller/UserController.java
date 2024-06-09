@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/v1/user")
 public class UserController {
@@ -18,5 +20,10 @@ public class UserController {
     @GetMapping("{id}")
     public UserDev get(@PathVariable("id") Long id) {
         return this.userRepository.findById(id).get();
+    }
+
+    @GetMapping
+    public List<UserDev> getAll (){
+        return this.userRepository.findAll();
     }
 }
