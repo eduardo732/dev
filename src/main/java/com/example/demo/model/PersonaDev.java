@@ -14,7 +14,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserDev {
+public class PersonaDev {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
