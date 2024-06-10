@@ -14,10 +14,10 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class PersonaDev {
+public class Person {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String userName;
-    private String password;
+    private String name;
+    private String lastName;
 }
